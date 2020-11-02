@@ -1,0 +1,1826 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="11/2/2020 10:37:36 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="KARIM"
+  DTS:CreatorName="KARIM\User"
+  DTS:DTSID="{A1BFE0C3-DF0E-493E-A6A2-F37F02EA7F74}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.123"
+  DTS:LocaleID="1036"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="23"
+  DTS:VersionGUID="{36DBC2D0-FCC8-4124-AE21-B3F82CD8B529}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Customer_CSV]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{6F25F9D0-C061-484B-B053-E7FFF1F4C34C}"
+      DTS:ObjectName="Customer_CSV">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[$Package::Customer_CSV_ConnectionString1]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1036"
+          DTS:HeaderRowsToSkip="5"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="@[Package::DirName] + @[Package::FileName]">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="id"
+              DTS:DTSID="{9F433946-CCF2-45B6-8A8F-8220E0336BE9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CustomerName"
+              DTS:DTSID="{8FBBC4B9-758F-4F1E-97D6-3C6017742F99}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CustomerAddress"
+              DTS:DTSID="{1B070F9E-ED42-485E-9B2A-6EB5F5718F0C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="idState"
+              DTS:DTSID="{E14BEF74-06A5-4872-A6CB-52FD50357AC8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="id2"
+              DTS:DTSID="{A34E402D-754C-4216-A330-9CDAB6611820}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="RegTime"
+              DTS:DTSID="{7E64B759-3922-449A-938B-F27EE3BB6418}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="RegisterTime"
+              DTS:DTSID="{5B79274F-FFDC-4F6B-8583-0F59DCF7F410}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Somme1"
+              DTS:DTSID="{6462F830-53E9-4774-8CAB-9BEC2EF9CD56}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Somme2"
+              DTS:DTSID="{CF9CCC8D-7B47-4582-A91E-0F393F9DE887}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Somme3"
+              DTS:DTSID="{ECF354DF-928C-4941-9563-D488E62A8A93}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Somme4"
+              DTS:DTSID="{A7369FC1-C38F-4C00-943D-2509B2C1A585}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Somme5"
+              DTS:DTSID="{20CEE898-8452-4970-8DDE-AEE1626F6B2B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Somme6"
+              DTS:DTSID="{B09E5A90-2D52-45CD-81A1-7B58CD845C36}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Somme7"
+              DTS:DTSID="{52B28A4E-2928-4EB9-9F13-27CB7DE52386}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Gestionnaire de connexions FTP]"
+      DTS:CreationName="FTP"
+      DTS:DTSID="{02675119-FE15-451D-8711-16EB523F98F4}"
+      DTS:ObjectName="Gestionnaire de connexions FTP">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="localhost:21">
+          <DTS:FtpConnection
+            DTS:ServerName="localhost"
+            DTS:ServerUserName="talend">
+            <DTS:Property
+              DTS:Name="ServerPassword"
+              Sensitive="1"
+              Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAvXXlK2b/xUm1gSt12IJXnAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACTwUj876wXilclnZjR4eL4B2wf6cHK/+StiWVk+BPuuwAAAAAOgAAAAAIAACAAAABCF+pW9Ce/n/yxtSG2w2tm3vj6bBaMC5L6CKowUGbrZxAAAADOIzqBQExrfBODMgHNosSyQAAAAFXGdUjCJMESZJec64RnF2aprBc6o7LV3SEM8APaBl1q89+0am04cJA0XpR6kkUVyYqh6X/NP5eKfB/fg5fdttM</DTS:Property>
+          </DTS:FtpConnection>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Gestionnaire de connexions FTP 1]"
+      DTS:CreationName="FTP"
+      DTS:DTSID="{D7A96850-AACF-4DB9-B200-8189523C3F18}"
+      DTS:ObjectName="Gestionnaire de connexions FTP 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="localhost:21">
+          <DTS:FtpConnection
+            DTS:ServerName="localhost"
+            DTS:ServerUserName="mehdi">
+            <DTS:Property
+              DTS:Name="ServerPassword"
+              Sensitive="1"
+              Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAvXXlK2b/xUm1gSt12IJXnAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADeD0BcqTSeRSi4y2vDf7lmIwZvT1A5pOUQYHrlXhJGwwAAAAAOgAAAAAIAACAAAADyLlmifCeGBlqPyr7Eb0VGt7PUr/RCzgBichzxJxlqbBAAAAAAUYzBDEwpGHytKDq6NSU+QAAAAKsAvNoeX582ObiRM4yXpgA2bL6k2sqYGUihy09Xi2W7vJ1FTmSKVT/YcaKkFbNazRoTjQ904oCH90kMFRpoop4</DTS:Property>
+          </DTS:FtpConnection>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[KARIM\MSSQL2019.AdventureWorks2017.mehdi]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{8CD0F7F7-23FE-4451-8E6E-412C199E026D}"
+      DTS:ObjectName="KARIM\MSSQL2019.AdventureWorks2017.mehdi">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=KARIM\MSSQL2019;User ID=mehdi;Initial Catalog=AdventureWorks2017;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAvXXlK2b/xUm1gSt12IJXnAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAD/znNaJ5waAKvteH+S06x38oTGLO8W+uDJC2XKZwZ4agAAAAAOgAAAAAIAACAAAABut28U+1J/ejvSi49GPI2HTJl92BPflLnvCqalNlM4VRAAAADk928y6JkXv5UXWxTg/897QAAAAPUZJ+s0smemfXUB82H2Xc5CqiuCNNNqb4WLoJkGdRnD0woEXFWl3vRPuTPJtAwNw1MgM1RF6lW7QVAdFAjGMqk</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[mehdi]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{C1BC895F-7260-4CC9-BDF0-AB846E1C61A9}"
+      DTS:ObjectName="mehdi">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[$Package::DirName]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:FileUsageType="2"
+          DTS:ConnectionString="D:\tmp\" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Rejets]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{6D67C411-629D-4108-9533-99154BC21BD2}"
+      DTS:ObjectName="Rejets">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1036"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="D:\@ Plan Formation Consultants ADBI\2. Talend DI (5j+5j)\1. Formation DI Niveau 1\fichier_data\customer_rejets.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="id"
+              DTS:DTSID="{CE6E0D24-C1F4-4C25-B652-B8BAFB04AF8A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CustomerName"
+              DTS:DTSID="{06A0D08F-1C97-4133-8295-D6AC76E7D8D1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CustomerAddress"
+              DTS:DTSID="{8DD30B70-0192-4906-BBD6-B572C3146629}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="idState"
+              DTS:DTSID="{CF75FA4C-336A-4E4B-951A-56452ECBAD8B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="id2"
+              DTS:DTSID="{CBADC1AB-390F-4D13-94D3-55BFEE404FDA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="RegTime"
+              DTS:DTSID="{27F1DE99-B636-423D-86A3-3A2CDFC814C8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="RegisterTime"
+              DTS:DTSID="{338632F8-2F02-4E65-B83F-AC5A15496111}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Somme1"
+              DTS:DTSID="{4E2EA602-566E-4A87-A81B-78C243238CA4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Somme2"
+              DTS:DTSID="{4E773243-1871-44B1-9427-46946576A584}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Somme3"
+              DTS:DTSID="{1D5E1F51-42F4-4813-8EC5-AD991FE739F2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Somme4"
+              DTS:DTSID="{467330B8-033C-4451-88BE-6C216BFE4F8C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Somme5"
+              DTS:DTSID="{B7A2AA71-90FF-4C66-93D9-6BC617984432}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Somme6"
+              DTS:DTSID="{17CD7FAC-03C6-4469-BA91-11A3C4AB5610}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Somme7"
+              DTS:DTSID="{6778612B-14DE-4B79-9471-E15770920A24}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ErrorCode"
+              DTS:DTSID="{08A88E5F-1EEF-4CC3-A37E-703DF8542D75}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ErrorColumn"
+              DTS:DTSID="{291B0471-946A-403C-B8C7-49FD07EA8559}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:PackageParameters>
+    <DTS:PackageParameter
+      DTS:CreationName=""
+      DTS:DataType="8"
+      DTS:DTSID="{4E85E9A8-8CE1-46B8-BE01-FE9FAF91AFD3}"
+      DTS:ObjectName="Customer_CSV_ConnectionString">
+      <DTS:Property
+        DTS:DataType="8"
+        DTS:Name="ParameterValue">D:\tmp\customer.csv</DTS:Property>
+    </DTS:PackageParameter>
+    <DTS:PackageParameter
+      DTS:CreationName=""
+      DTS:DataType="8"
+      DTS:DTSID="{6E9F30F9-6C14-44F4-9554-4863DE4B86D4}"
+      DTS:ObjectName="Customer_CSV_ConnectionString1">
+      <DTS:Property
+        DTS:DataType="8"
+        DTS:Name="ParameterValue">@[Package::DirName] + @[Package::FileName]</DTS:Property>
+    </DTS:PackageParameter>
+    <DTS:PackageParameter
+      DTS:CreationName=""
+      DTS:DataType="8"
+      DTS:DTSID="{B4E4BBA5-FE1E-4BED-A8C5-CFDCA6D5D579}"
+      DTS:ObjectName="DirName">
+      <DTS:Property
+        DTS:DataType="8"
+        DTS:Name="ParameterValue">D:\tmp\</DTS:Property>
+    </DTS:PackageParameter>
+    <DTS:PackageParameter
+      DTS:CreationName=""
+      DTS:DataType="8"
+      DTS:DTSID="{5F3AE962-8AFA-4909-B529-843BDDDDC012}"
+      DTS:ObjectName="FileName">
+      <DTS:Property
+        DTS:DataType="8"
+        DTS:Name="ParameterValue">customer.csv</DTS:Property>
+    </DTS:PackageParameter>
+  </DTS:PackageParameters>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{208B42F3-9A35-4F25-8651-157878902E68}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="@[$Package::FileName]"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="Var1">
+      <DTS:VariableValue
+        DTS:DataType="8">customer.csv</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Connexion FTP"
+      DTS:CreationName="Microsoft.FtpTask"
+      DTS:Description="Tâche FTP"
+      DTS:DTSID="{76EB9EF3-C0B4-4515-9409-E71E7E7CE734}"
+      DTS:ExecutableType="Microsoft.FtpTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Connexion FTP"
+      DTS:TaskContact="FTP Task; Microsoft Corporation; SQL Server 2019; (c) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <FtpData
+          ConnectionName="{D7A96850-AACF-4DB9-B200-8189523C3F18}"
+          TaskOperationType="Receive"
+          TaskLocalPath="mehdi"
+          TaskRemotePath="/customer.csv" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Conteneur de boucles Foreach"
+      DTS:CreationName="STOCK:FOREACHLOOP"
+      DTS:Description="Conteneur de boucles Foreach"
+      DTS:DTSID="{5CA28C0C-31A5-4A7A-92EF-D114135F788E}"
+      DTS:ExecutableType="STOCK:FOREACHLOOP"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Conteneur de boucles Foreach">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Conteneur de boucles Foreach\Integration Data Client"
+          DTS:CreationName="Microsoft.Pipeline"
+          DTS:Description="Tâche de flux de données"
+          DTS:DTSID="{25E9B644-BE46-4985-9E0D-5C46EA2A168B}"
+          DTS:ExecutableType="Microsoft.Pipeline"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Integration Data Client"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\Conteneur de boucles Foreach\Integration Data Client\Colonne dérivée"
+                  componentClassID="Microsoft.DerivedColumn"
+                  contactInfo="Colonne dérivée;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;0"
+                  description="Crée de nouvelles valeurs de colonne en appliquant des expressions aux colonnes d'entrée de transformation. Créez de nouvelles colonnes ou remplacez celles qui existent déjà. Par exemple, concaténez les valeurs de la colonne 'prénom' et de la colonne 'nom' pour créer une colonne 'nom complet'."
+                  name="Colonne dérivée"
+                  usesDispositions="true">
+                  <inputs>
+                    <input
+                      refId="Package\Conteneur de boucles Foreach\Integration Data Client\Colonne dérivée.Inputs[Entrée de colonne dérivée]"
+                      description="Entrée de la transformation de colonnes dérivées"
+                      name="Entrée de colonne dérivée">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Conteneur de boucles Foreach\Integration Data Client\Colonne dérivée.Inputs[Entrée de colonne dérivée].Columns[Somme1]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Somme1"
+                          lineageId="Package\Conteneur de boucles Foreach\Integration Data Client\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[Somme1]" />
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Conteneur de boucles Foreach\Integration Data Client\Colonne dérivée.Outputs[Sortie de colonne dérivée]"
+                      description="Sortie par défaut de la transformation de colonnes dérivées"
+                      exclusionGroup="1"
+                      name="Sortie de colonne dérivée"
+                      synchronousInputId="Package\Conteneur de boucles Foreach\Integration Data Client\Colonne dérivée.Inputs[Entrée de colonne dérivée]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Conteneur de boucles Foreach\Integration Data Client\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[Somme1_out]"
+                          dataType="i1"
+                          errorOrTruncationOperation="Calcul"
+                          errorRowDisposition="RedirectRow"
+                          lineageId="Package\Conteneur de boucles Foreach\Integration Data Client\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[Somme1_out]"
+                          name="Somme1_out"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Expression de colonne dérivée"
+                              name="Expression">(DT_I1)#{Package\Conteneur de boucles Foreach\Integration Data Client\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[Somme1]}</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Expression claire de colonne dérivée"
+                              expressionType="Notify"
+                              name="FriendlyExpression">(DT_I1)Somme1</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Conteneur de boucles Foreach\Integration Data Client\Colonne dérivée.Outputs[Sortie d'erreur de colonne dérivée]"
+                      description="Sortie d'erreur de la transformation de colonnes dérivées"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Sortie d'erreur de colonne dérivée"
+                      synchronousInputId="Package\Conteneur de boucles Foreach\Integration Data Client\Colonne dérivée.Inputs[Entrée de colonne dérivée]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Conteneur de boucles Foreach\Integration Data Client\Colonne dérivée.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Conteneur de boucles Foreach\Integration Data Client\Colonne dérivée.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Conteneur de boucles Foreach\Integration Data Client\Colonne dérivée.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Conteneur de boucles Foreach\Integration Data Client\Colonne dérivée.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Conteneur de boucles Foreach\Integration Data Client\Destination de fichier plat"
+                  componentClassID="Microsoft.FlatFileDestination"
+                  contactInfo="Destination de fichier plat;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;1"
+                  description="Destination de fichier plat"
+                  localeId="1036"
+                  name="Destination de fichier plat"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Spécifie si les données remplaceront ou seront ajoutées au fichier de destination."
+                      name="Overwrite">true</property>
+                    <property
+                      dataType="System.Null"
+                      description="Spécifie le texte à enregistrer sur le fichier de destination avant d'enregistrer des données."
+                      expressionType="Notify"
+                      name="Header" />
+                    <property
+                      dataType="System.Boolean"
+                      description="Quand le qualificateur de texte est activé, spécifie si le qualificateur de texte dans les données écrites dans le fichier de destination va être échappé ou non."
+                      name="EscapeQualifier">false</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Conteneur de boucles Foreach\Integration Data Client\Destination de fichier plat.Connections[FlatFileConnection]"
+                      connectionManagerID="Package.ConnectionManagers[Rejets]"
+                      connectionManagerRefId="Package.ConnectionManagers[Rejets]"
+                      name="FlatFileConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Conteneur de boucles Foreach\Integration Data Client\Destination de fichier plat.Inputs[Entrée de destination de fichier plat]"
+                      hasSideEffects="true"
+                      name="Entrée de destination de fichier plat">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Conteneur de boucles Foreach\Integration Data Client\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].Columns[id]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="id"
+                          externalMetadataColumnId="Package\Conteneur de boucles Foreach\Integration Data Client\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[id]"
+                          lineageId="Package\Conteneur de boucles Foreach\Integration Data Client\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[id]" />
+                        <inputColumn
+                          refId="Package\Conteneur de boucles Foreach\Integration Data Client\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].Columns[CustomerName]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="CustomerName"
+                          externalMetadataColumnId="Package\Conteneur de boucles Foreach\Integration Data Client\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[CustomerName]"
+                          lineageId="Package\Conteneur de boucles Foreach\Integration Data Client\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[CustomerName]" />
+                        <inputColumn
+                          refId="Package\Conteneur de boucles Foreach\Integration Data Client\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].Columns[CustomerAddress]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="CustomerAddress"
+                          externalMetadataColumnId="Package\Conteneur de boucles Foreach\Integration Data Client\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[CustomerAddress]"
+                          lineageId="Package\Conteneur de boucles Foreach\Integration Data Client\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[CustomerAddress]" />
+                        <inputColumn
+                          refId="Package\Conteneur de boucles Foreach\Integration Data Client\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].Columns[idState]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="idState"
+                          externalMetadataColumnId="Package\Conteneur de boucles Foreach\Integration Data Client\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[idState]"
+                          lineageId="Package\Conteneur de boucles Foreach\Integration Data Client\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[idState]" />
+                        <inputColumn
+                          refId="Package\Conteneur de boucles Foreach\Integration Data Client\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].Columns[id2]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="id2"
+                          externalMetadataColumnId="Package\Conteneur de boucles Foreach\Integration Data Client\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[id2]"
+                          lineageId="Package\Conteneur de boucles Foreach\Integration Data Client\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[id2]" />
+                        <inputColumn
+                          refId="Package\Conteneur de boucles Foreach\Integration Data Client\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].Columns[RegTime]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="RegTime"
+                          externalMetadataColumnId="Package\Conteneur de boucles Foreach\Integration Data Client\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[RegTime]"
+                          lineageId="Package\Conteneur de boucles Foreach\Integration Data Client\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[RegTime]" />
+                        <inputColumn
+                          refId="Package\Conteneur de boucles Foreach\Integration Data Client\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].Columns[RegisterTime]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="RegisterTime"
+                          externalMetadataColumnId="Package\Conteneur de boucles Foreach\Integration Data Client\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[RegisterTime]"
+                          lineageId="Package\Conteneur de boucles Foreach\Integration Data Client\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[RegisterTime]" />
+                        <inputColumn
+                          refId="Package\Conteneur de boucles Foreach\Integration Data Client\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].Columns[Somme1]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Somme1"
+                          externalMetadataColumnId="Package\Conteneur de boucles Foreach\Integration Data Client\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[Somme1]"
+                          lineageId="Package\Conteneur de boucles Foreach\Integration Data Client\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[Somme1]" />
+                        <inputColumn
+                          refId="Package\Conteneur de boucles Foreach\Integration Data Client\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].Columns[Somme2]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Somme2"
+                          externalMetadataColumnId="Package\Conteneur de boucles Foreach\Integration Data Client\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[Somme2]"
+                          lineageId="Package\Conteneur de boucles Foreach\Integration Data Client\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[Somme2]" />
+                        <inputColumn
+                          refId="Package\Conteneur de boucles Foreach\Integration Data Client\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].Columns[Somme3]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Somme3"
+                          externalMetadataColumnId="Package\Conteneur de boucles Foreach\Integration Data Client\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[Somme3]"
+                          lineageId="Package\Conteneur de boucles Foreach\Integration Data Client\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[Somme3]" />
+                        <inputColumn
+                          refId="Package\Conteneur de boucles Foreach\Integration Data Client\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].Columns[Somme4]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Somme4"
+                          externalMetadataColumnId="Package\Conteneur de boucles Foreach\Integration Data Client\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[Somme4]"
+                          lineageId="Package\Conteneur de boucles Foreach\Integration Data Client\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[Somme4]" />
+                        <inputColumn
+                          refId="Package\Conteneur de boucles Foreach\Integration Data Client\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].Columns[Somme5]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Somme5"
+                          externalMetadataColumnId="Package\Conteneur de boucles Foreach\Integration Data Client\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[Somme5]"
+                          lineageId="Package\Conteneur de boucles Foreach\Integration Data Client\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[Somme5]" />
+                        <inputColumn
+                          refId="Package\Conteneur de boucles Foreach\Integration Data Client\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].Columns[Somme6]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Somme6"
+                          externalMetadataColumnId="Package\Conteneur de boucles Foreach\Integration Data Client\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[Somme6]"
+                          lineageId="Package\Conteneur de boucles Foreach\Integration Data Client\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[Somme6]" />
+                        <inputColumn
+                          refId="Package\Conteneur de boucles Foreach\Integration Data Client\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].Columns[Somme7]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Somme7"
+                          externalMetadataColumnId="Package\Conteneur de boucles Foreach\Integration Data Client\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[Somme7]"
+                          lineageId="Package\Conteneur de boucles Foreach\Integration Data Client\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[Somme7]" />
+                        <inputColumn
+                          refId="Package\Conteneur de boucles Foreach\Integration Data Client\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].Columns[ErrorCode]"
+                          cachedDataType="i4"
+                          cachedName="ErrorCode"
+                          externalMetadataColumnId="Package\Conteneur de boucles Foreach\Integration Data Client\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[ErrorCode]"
+                          lineageId="Package\Conteneur de boucles Foreach\Integration Data Client\Colonne dérivée.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorCode]" />
+                        <inputColumn
+                          refId="Package\Conteneur de boucles Foreach\Integration Data Client\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].Columns[ErrorColumn]"
+                          cachedDataType="i4"
+                          cachedName="ErrorColumn"
+                          externalMetadataColumnId="Package\Conteneur de boucles Foreach\Integration Data Client\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[ErrorColumn]"
+                          lineageId="Package\Conteneur de boucles Foreach\Integration Data Client\Colonne dérivée.Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorColumn]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach\Integration Data Client\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[id]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="id" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach\Integration Data Client\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[CustomerName]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="CustomerName" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach\Integration Data Client\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[CustomerAddress]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="CustomerAddress" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach\Integration Data Client\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[idState]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="idState" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach\Integration Data Client\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[id2]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="id2" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach\Integration Data Client\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[RegTime]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="RegTime" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach\Integration Data Client\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[RegisterTime]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="RegisterTime" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach\Integration Data Client\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[Somme1]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Somme1" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach\Integration Data Client\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[Somme2]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Somme2" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach\Integration Data Client\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[Somme3]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Somme3" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach\Integration Data Client\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[Somme4]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Somme4" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach\Integration Data Client\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[Somme5]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Somme5" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach\Integration Data Client\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[Somme6]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Somme6" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach\Integration Data Client\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[Somme7]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Somme7" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach\Integration Data Client\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[ErrorCode]"
+                          dataType="i4"
+                          name="ErrorCode" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach\Integration Data Client\Destination de fichier plat.Inputs[Entrée de destination de fichier plat].ExternalColumns[ErrorColumn]"
+                          dataType="i4"
+                          name="ErrorColumn" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                </component>
+                <component
+                  refId="Package\Conteneur de boucles Foreach\Integration Data Client\Destination OLE DB"
+                  componentClassID="Microsoft.OLEDBDestination"
+                  contactInfo="Destination OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;4"
+                  description="Destination OLE DB"
+                  name="Destination OLE DB"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="Nombre de secondes avant l'expiration d'une commande.  Une valeur égale à 0 indique un délai d'expiration infini."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Spécifie le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
+                      name="OpenRowset">[mehdi]</property>
+                    <property
+                      dataType="System.String"
+                      description="Spécifie la variable contenant le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="Commande SQL à exécuter."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Spécifie la page de codes de la colonne à utiliser lorsque les informations de page de codes ne sont pas disponibles à partir de la source de données."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Force l'utilisation de la valeur de propriété DefaultCodePage lors de la description des données caractères."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Spécifie le mode utilisé pour accéder à la base de données."
+                      name="AccessMode"
+                      typeConverter="AccessMode">0</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indique si les valeurs fournies pour les colonnes d'identité seront copiées à la destination. Si la valeur est définie à False, les valeurs des colonnes d'identité seront générées automatiquement à la destination. Ne s'applique que si le chargement rapide est activé."
+                      name="FastLoadKeepIdentity">false</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indique si les colonnes contenant la valeur NULL auront cette valeur NULL copiée à la destination. Si la valeur est définie à False, les colonnes contenant la valeur NULL auront leurs valeurs par défaut insérées à la destination. Ne s'applique que si le chargement rapide est activé."
+                      name="FastLoadKeepNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Spécifie les options à utiliser avec le chargement rapide.  Ne s'applique que si le chargement rapide est activé."
+                      name="FastLoadOptions"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Spécifie quand les validations sont émises pendant l'insertion des données.  Une valeur égale à 0 spécifie qu'une validation sera émise à la fin de l'insertion des données.  Ne s'applique que si le chargement rapide est activé."
+                      name="FastLoadMaxInsertCommitSize">2147483647</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Conteneur de boucles Foreach\Integration Data Client\Destination OLE DB.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[KARIM\MSSQL2019.AdventureWorks2017.mehdi]"
+                      connectionManagerRefId="Package.ConnectionManagers[KARIM\MSSQL2019.AdventureWorks2017.mehdi]"
+                      description="Connexion OLE DB en cours d'exécution utilisée pour accéder à la base de données."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Conteneur de boucles Foreach\Integration Data Client\Destination OLE DB.Inputs[Entrée de destination OLE DB]"
+                      errorOrTruncationOperation="Insérer"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="Entrée de destination OLE DB">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Conteneur de boucles Foreach\Integration Data Client\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[id]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="id"
+                          externalMetadataColumnId="Package\Conteneur de boucles Foreach\Integration Data Client\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[id]"
+                          lineageId="Package\Conteneur de boucles Foreach\Integration Data Client\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[id]" />
+                        <inputColumn
+                          refId="Package\Conteneur de boucles Foreach\Integration Data Client\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[CustomerName]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="CustomerName"
+                          externalMetadataColumnId="Package\Conteneur de boucles Foreach\Integration Data Client\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[CustomerName]"
+                          lineageId="Package\Conteneur de boucles Foreach\Integration Data Client\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[CustomerName]" />
+                        <inputColumn
+                          refId="Package\Conteneur de boucles Foreach\Integration Data Client\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[CustomerAddress]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="CustomerAddress"
+                          externalMetadataColumnId="Package\Conteneur de boucles Foreach\Integration Data Client\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[CustomerAddress]"
+                          lineageId="Package\Conteneur de boucles Foreach\Integration Data Client\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[CustomerAddress]" />
+                        <inputColumn
+                          refId="Package\Conteneur de boucles Foreach\Integration Data Client\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[idState]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="idState"
+                          externalMetadataColumnId="Package\Conteneur de boucles Foreach\Integration Data Client\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[idState]"
+                          lineageId="Package\Conteneur de boucles Foreach\Integration Data Client\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[idState]" />
+                        <inputColumn
+                          refId="Package\Conteneur de boucles Foreach\Integration Data Client\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[id2]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="id2"
+                          externalMetadataColumnId="Package\Conteneur de boucles Foreach\Integration Data Client\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[id2]"
+                          lineageId="Package\Conteneur de boucles Foreach\Integration Data Client\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[id2]" />
+                        <inputColumn
+                          refId="Package\Conteneur de boucles Foreach\Integration Data Client\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[RegTime]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="RegTime"
+                          externalMetadataColumnId="Package\Conteneur de boucles Foreach\Integration Data Client\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[RegTime]"
+                          lineageId="Package\Conteneur de boucles Foreach\Integration Data Client\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[RegTime]" />
+                        <inputColumn
+                          refId="Package\Conteneur de boucles Foreach\Integration Data Client\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[RegisterTime]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="RegisterTime"
+                          externalMetadataColumnId="Package\Conteneur de boucles Foreach\Integration Data Client\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[RegisterTime]"
+                          lineageId="Package\Conteneur de boucles Foreach\Integration Data Client\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[RegisterTime]" />
+                        <inputColumn
+                          refId="Package\Conteneur de boucles Foreach\Integration Data Client\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[Somme1]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Somme1"
+                          externalMetadataColumnId="Package\Conteneur de boucles Foreach\Integration Data Client\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[Somme1]"
+                          lineageId="Package\Conteneur de boucles Foreach\Integration Data Client\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[Somme1]" />
+                        <inputColumn
+                          refId="Package\Conteneur de boucles Foreach\Integration Data Client\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[Somme2]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Somme2"
+                          externalMetadataColumnId="Package\Conteneur de boucles Foreach\Integration Data Client\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[Somme2]"
+                          lineageId="Package\Conteneur de boucles Foreach\Integration Data Client\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[Somme2]" />
+                        <inputColumn
+                          refId="Package\Conteneur de boucles Foreach\Integration Data Client\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[Somme3]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Somme3"
+                          externalMetadataColumnId="Package\Conteneur de boucles Foreach\Integration Data Client\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[Somme3]"
+                          lineageId="Package\Conteneur de boucles Foreach\Integration Data Client\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[Somme3]" />
+                        <inputColumn
+                          refId="Package\Conteneur de boucles Foreach\Integration Data Client\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[Somme4]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Somme4"
+                          externalMetadataColumnId="Package\Conteneur de boucles Foreach\Integration Data Client\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[Somme4]"
+                          lineageId="Package\Conteneur de boucles Foreach\Integration Data Client\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[Somme4]" />
+                        <inputColumn
+                          refId="Package\Conteneur de boucles Foreach\Integration Data Client\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[Somme5]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Somme5"
+                          externalMetadataColumnId="Package\Conteneur de boucles Foreach\Integration Data Client\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[Somme5]"
+                          lineageId="Package\Conteneur de boucles Foreach\Integration Data Client\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[Somme5]" />
+                        <inputColumn
+                          refId="Package\Conteneur de boucles Foreach\Integration Data Client\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[Somme6]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Somme6"
+                          externalMetadataColumnId="Package\Conteneur de boucles Foreach\Integration Data Client\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[Somme6]"
+                          lineageId="Package\Conteneur de boucles Foreach\Integration Data Client\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[Somme6]" />
+                        <inputColumn
+                          refId="Package\Conteneur de boucles Foreach\Integration Data Client\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[Somme7]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Somme7"
+                          externalMetadataColumnId="Package\Conteneur de boucles Foreach\Integration Data Client\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[Somme7]"
+                          lineageId="Package\Conteneur de boucles Foreach\Integration Data Client\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[Somme7]" />
+                        <inputColumn
+                          refId="Package\Conteneur de boucles Foreach\Integration Data Client\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[Somme1_out]"
+                          cachedDataType="i1"
+                          cachedName="Somme1_out"
+                          externalMetadataColumnId="Package\Conteneur de boucles Foreach\Integration Data Client\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[Somme1_out]"
+                          lineageId="Package\Conteneur de boucles Foreach\Integration Data Client\Colonne dérivée.Outputs[Sortie de colonne dérivée].Columns[Somme1_out]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach\Integration Data Client\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[id]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="id" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach\Integration Data Client\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[CustomerName]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="CustomerName" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach\Integration Data Client\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[CustomerAddress]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="CustomerAddress" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach\Integration Data Client\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[idState]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="idState" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach\Integration Data Client\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[id2]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="id2" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach\Integration Data Client\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[RegTime]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="RegTime" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach\Integration Data Client\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[RegisterTime]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="RegisterTime" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach\Integration Data Client\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[Somme1]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Somme1" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach\Integration Data Client\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[Somme2]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Somme2" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach\Integration Data Client\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[Somme3]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Somme3" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach\Integration Data Client\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[Somme4]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Somme4" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach\Integration Data Client\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[Somme5]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Somme5" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach\Integration Data Client\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[Somme6]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Somme6" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach\Integration Data Client\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[Somme7]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Somme7" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach\Integration Data Client\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[Somme1_out]"
+                          dataType="i2"
+                          name="Somme1_out" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Conteneur de boucles Foreach\Integration Data Client\Destination OLE DB.Outputs[Sortie d'erreur de destination OLE DB]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Sortie d'erreur de destination OLE DB"
+                      synchronousInputId="Package\Conteneur de boucles Foreach\Integration Data Client\Destination OLE DB.Inputs[Entrée de destination OLE DB]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Conteneur de boucles Foreach\Integration Data Client\Destination OLE DB.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Conteneur de boucles Foreach\Integration Data Client\Destination OLE DB.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Conteneur de boucles Foreach\Integration Data Client\Destination OLE DB.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Conteneur de boucles Foreach\Integration Data Client\Destination OLE DB.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Conteneur de boucles Foreach\Integration Data Client\Source du fichier plat"
+                  componentClassID="Microsoft.FlatFileSource"
+                  contactInfo="Source du fichier plat;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;1"
+                  description="Source du fichier plat"
+                  localeId="1036"
+                  name="Source du fichier plat"
+                  usesDispositions="true"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Spécifie si les colonnes dont la longueur est zéro sont traitées comme des valeurs NULL."
+                      name="RetainNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Spécifie le nom d'une colonne de sortie contenant le nom du fichier. Si aucun nom n'est spécifié, aucune colonne de sortie contenant le nom du fichier ne sera générée."
+                      name="FileNameColumnName"></property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Conteneur de boucles Foreach\Integration Data Client\Source du fichier plat.Connections[FlatFileConnection]"
+                      connectionManagerID="Package.ConnectionManagers[Customer_CSV]"
+                      connectionManagerRefId="Package.ConnectionManagers[Customer_CSV]"
+                      name="FlatFileConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\Conteneur de boucles Foreach\Integration Data Client\Source du fichier plat.Outputs[Sortie de source de fichier plat]"
+                      name="Sortie de source de fichier plat">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Conteneur de boucles Foreach\Integration Data Client\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[id]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Conteneur de boucles Foreach\Integration Data Client\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[id]"
+                          length="50"
+                          lineageId="Package\Conteneur de boucles Foreach\Integration Data Client\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[id]"
+                          name="id"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indique si les données sont au format binaire."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Conteneur de boucles Foreach\Integration Data Client\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[CustomerName]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Conteneur de boucles Foreach\Integration Data Client\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[CustomerName]"
+                          length="50"
+                          lineageId="Package\Conteneur de boucles Foreach\Integration Data Client\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[CustomerName]"
+                          name="CustomerName"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indique si les données sont au format binaire."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Conteneur de boucles Foreach\Integration Data Client\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[CustomerAddress]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Conteneur de boucles Foreach\Integration Data Client\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[CustomerAddress]"
+                          length="50"
+                          lineageId="Package\Conteneur de boucles Foreach\Integration Data Client\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[CustomerAddress]"
+                          name="CustomerAddress"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indique si les données sont au format binaire."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Conteneur de boucles Foreach\Integration Data Client\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[idState]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Conteneur de boucles Foreach\Integration Data Client\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[idState]"
+                          length="50"
+                          lineageId="Package\Conteneur de boucles Foreach\Integration Data Client\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[idState]"
+                          name="idState"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indique si les données sont au format binaire."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Conteneur de boucles Foreach\Integration Data Client\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[id2]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Conteneur de boucles Foreach\Integration Data Client\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[id2]"
+                          length="50"
+                          lineageId="Package\Conteneur de boucles Foreach\Integration Data Client\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[id2]"
+                          name="id2"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indique si les données sont au format binaire."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Conteneur de boucles Foreach\Integration Data Client\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[RegTime]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Conteneur de boucles Foreach\Integration Data Client\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[RegTime]"
+                          length="50"
+                          lineageId="Package\Conteneur de boucles Foreach\Integration Data Client\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[RegTime]"
+                          name="RegTime"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indique si les données sont au format binaire."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Conteneur de boucles Foreach\Integration Data Client\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[RegisterTime]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Conteneur de boucles Foreach\Integration Data Client\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[RegisterTime]"
+                          length="50"
+                          lineageId="Package\Conteneur de boucles Foreach\Integration Data Client\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[RegisterTime]"
+                          name="RegisterTime"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indique si les données sont au format binaire."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Conteneur de boucles Foreach\Integration Data Client\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[Somme1]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Conteneur de boucles Foreach\Integration Data Client\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[Somme1]"
+                          length="50"
+                          lineageId="Package\Conteneur de boucles Foreach\Integration Data Client\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[Somme1]"
+                          name="Somme1"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indique si les données sont au format binaire."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Conteneur de boucles Foreach\Integration Data Client\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[Somme2]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Conteneur de boucles Foreach\Integration Data Client\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[Somme2]"
+                          length="50"
+                          lineageId="Package\Conteneur de boucles Foreach\Integration Data Client\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[Somme2]"
+                          name="Somme2"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indique si les données sont au format binaire."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Conteneur de boucles Foreach\Integration Data Client\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[Somme3]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Conteneur de boucles Foreach\Integration Data Client\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[Somme3]"
+                          length="50"
+                          lineageId="Package\Conteneur de boucles Foreach\Integration Data Client\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[Somme3]"
+                          name="Somme3"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indique si les données sont au format binaire."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Conteneur de boucles Foreach\Integration Data Client\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[Somme4]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Conteneur de boucles Foreach\Integration Data Client\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[Somme4]"
+                          length="50"
+                          lineageId="Package\Conteneur de boucles Foreach\Integration Data Client\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[Somme4]"
+                          name="Somme4"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indique si les données sont au format binaire."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Conteneur de boucles Foreach\Integration Data Client\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[Somme5]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Conteneur de boucles Foreach\Integration Data Client\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[Somme5]"
+                          length="50"
+                          lineageId="Package\Conteneur de boucles Foreach\Integration Data Client\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[Somme5]"
+                          name="Somme5"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indique si les données sont au format binaire."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Conteneur de boucles Foreach\Integration Data Client\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[Somme6]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Conteneur de boucles Foreach\Integration Data Client\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[Somme6]"
+                          length="50"
+                          lineageId="Package\Conteneur de boucles Foreach\Integration Data Client\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[Somme6]"
+                          name="Somme6"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indique si les données sont au format binaire."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Conteneur de boucles Foreach\Integration Data Client\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[Somme7]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Conteneur de boucles Foreach\Integration Data Client\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[Somme7]"
+                          length="50"
+                          lineageId="Package\Conteneur de boucles Foreach\Integration Data Client\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[Somme7]"
+                          name="Somme7"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indique si les données sont au format binaire."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach\Integration Data Client\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[id]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="id" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach\Integration Data Client\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[CustomerName]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="CustomerName" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach\Integration Data Client\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[CustomerAddress]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="CustomerAddress" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach\Integration Data Client\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[idState]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="idState" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach\Integration Data Client\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[id2]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="id2" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach\Integration Data Client\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[RegTime]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="RegTime" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach\Integration Data Client\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[RegisterTime]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="RegisterTime" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach\Integration Data Client\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[Somme1]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Somme1" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach\Integration Data Client\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[Somme2]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Somme2" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach\Integration Data Client\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[Somme3]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Somme3" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach\Integration Data Client\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[Somme4]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Somme4" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach\Integration Data Client\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[Somme5]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Somme5" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach\Integration Data Client\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[Somme6]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Somme6" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de boucles Foreach\Integration Data Client\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[Somme7]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Somme7" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\Conteneur de boucles Foreach\Integration Data Client\Source du fichier plat.Outputs[Sortie d'erreur de source de fichier plat]"
+                      isErrorOut="true"
+                      name="Sortie d'erreur de source de fichier plat">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Conteneur de boucles Foreach\Integration Data Client\Source du fichier plat.Outputs[Sortie d'erreur de source de fichier plat].Columns[Colonne de sortie d'erreur de source de fichier plat]"
+                          codePage="1252"
+                          dataType="text"
+                          description="Colonne de sortie d'erreur de source de fichier plat"
+                          lineageId="Package\Conteneur de boucles Foreach\Integration Data Client\Source du fichier plat.Outputs[Sortie d'erreur de source de fichier plat].Columns[Colonne de sortie d'erreur de source de fichier plat]"
+                          name="Colonne de sortie d'erreur de source de fichier plat" />
+                        <outputColumn
+                          refId="Package\Conteneur de boucles Foreach\Integration Data Client\Source du fichier plat.Outputs[Sortie d'erreur de source de fichier plat].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Conteneur de boucles Foreach\Integration Data Client\Source du fichier plat.Outputs[Sortie d'erreur de source de fichier plat].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Conteneur de boucles Foreach\Integration Data Client\Source du fichier plat.Outputs[Sortie d'erreur de source de fichier plat].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Conteneur de boucles Foreach\Integration Data Client\Source du fichier plat.Outputs[Sortie d'erreur de source de fichier plat].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\Conteneur de boucles Foreach\Integration Data Client.Paths[Sortie d'erreur de colonne dérivée]"
+                  endId="Package\Conteneur de boucles Foreach\Integration Data Client\Destination de fichier plat.Inputs[Entrée de destination de fichier plat]"
+                  name="Sortie d'erreur de colonne dérivée"
+                  startId="Package\Conteneur de boucles Foreach\Integration Data Client\Colonne dérivée.Outputs[Sortie d'erreur de colonne dérivée]" />
+                <path
+                  refId="Package\Conteneur de boucles Foreach\Integration Data Client.Paths[Sortie de colonne dérivée]"
+                  endId="Package\Conteneur de boucles Foreach\Integration Data Client\Destination OLE DB.Inputs[Entrée de destination OLE DB]"
+                  name="Sortie de colonne dérivée"
+                  startId="Package\Conteneur de boucles Foreach\Integration Data Client\Colonne dérivée.Outputs[Sortie de colonne dérivée]" />
+                <path
+                  refId="Package\Conteneur de boucles Foreach\Integration Data Client.Paths[Sortie de source de fichier plat]"
+                  endId="Package\Conteneur de boucles Foreach\Integration Data Client\Colonne dérivée.Inputs[Entrée de colonne dérivée]"
+                  name="Sortie de source de fichier plat"
+                  startId="Package\Conteneur de boucles Foreach\Integration Data Client\Source du fichier plat.Outputs[Sortie de source de fichier plat]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Contrainte]"
+      DTS:CreationName=""
+      DTS:DTSID="{E0E262E2-36BC-4A78-B382-497BD52D6304}"
+      DTS:From="Package\Connexion FTP"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Contrainte"
+      DTS:To="Package\Conteneur de boucles Foreach" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Cette section CDATA contient des informations sur la disposition du package. Elle comprend des informations telles que les coordonnées (x,y), la largeur et la hauteur.-->
+<!--Si vous modifiez manuellement cette section et commettez une erreur, vous pouvez la supprimer. -->
+<!--Le package pourra toujours se charger normalement, mais les informations de disposition précédente seront perdues et le concepteur réorganisera automatiquement les éléments sur l'aire de conception.-->
+<Objects
+  Version="8">
+  <!--Chaque nœud ci-dessous contiendra des propriétés qui n'affectent pas le comportement d'exécution.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="148.8,41.6"
+          Id="Package\Connexion FTP"
+          TopLeft="325.714291261167,16.0588237546307" />
+        <NodeLayout
+          Size="185.6,41.6"
+          Id="Package\Conteneur de boucles Foreach\Integration Data Client"
+          TopLeft="13.4285728152919,16.2058825030872" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="214.4,112.8"
+          Size="214.4,156"
+          Id="Package\Conteneur de boucles Foreach"
+          TopLeft="275.000004683222,107.823530923949" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Contrainte]"
+          TopLeft="400.114291261167,57.6588237546307">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-17.9142865779453,50.1647071693183"
+              Start="0,0"
+              End="-17.9142865779453,42.6647071693183">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21.0823535846591" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,21.0823535846591"
+                    Point2="0,25.0823535846591"
+                    Point3="-4,25.0823535846591" />
+                  <mssgle:LineSegment
+                    End="-13.9142865779453,25.0823535846591" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-13.9142865779453,25.0823535846591"
+                    Point2="-17.9142865779453,25.0823535846591"
+                    Point3="-17.9142865779453,29.0823535846591" />
+                  <mssgle:LineSegment
+                    End="-17.9142865779453,42.6647071693183" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Conteneur de boucles Foreach\Integration Data Client">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="178.4,41.6"
+          Id="Package\Conteneur de boucles Foreach\Integration Data Client\Source du fichier plat"
+          TopLeft="349,23" />
+        <NodeLayout
+          Size="199.2,41.6"
+          Id="Package\Conteneur de boucles Foreach\Integration Data Client\Destination de fichier plat"
+          TopLeft="599,236" />
+        <NodeLayout
+          Size="154.4,41.6"
+          Id="Package\Conteneur de boucles Foreach\Integration Data Client\Colonne dérivée"
+          TopLeft="364,144" />
+        <NodeLayout
+          Size="170.4,41.6"
+          Id="Package\Conteneur de boucles Foreach\Integration Data Client\Destination OLE DB"
+          TopLeft="279,254" />
+        <EdgeLayout
+          Id="Package\Conteneur de boucles Foreach\Integration Data Client.Paths[Sortie de source de fichier plat]"
+          TopLeft="439.7,64.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,79.4"
+              Start="0,0"
+              End="0,71.9">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,71.9" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Conteneur de boucles Foreach\Integration Data Client.Paths[Sortie de colonne dérivée]"
+          TopLeft="416.8,185.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-52.6000000000001,68.4"
+              Start="0,0"
+              End="-52.6000000000001,60.9">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,23.7809230769231" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,23.7809230769231"
+                    Point2="0,27.7809230769231"
+                    Point3="-4,27.7809230769231" />
+                  <mssgle:LineSegment
+                    End="-48.6000000000001,27.7809230769231" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-48.6000000000001,27.7809230769231"
+                    Point2="-52.6000000000001,27.7809230769231"
+                    Point3="-52.6000000000001,31.7809230769231" />
+                  <mssgle:LineSegment
+                    End="-52.6000000000001,60.9" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Conteneur de boucles Foreach\Integration Data Client.Paths[Sortie d'erreur de colonne dérivée]"
+          TopLeft="441.2,185.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="257.4,50.4"
+              Start="0,0"
+              End="257.4,42.9">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21.2" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,21.2"
+                    Point2="0,25.2"
+                    Point3="4,25.2" />
+                  <mssgle:LineSegment
+                    End="253.4,25.2" />
+                  <mssgle:CubicBezierSegment
+                    Point1="253.4,25.2"
+                    Point2="257.4,25.2"
+                    Point3="257.4,29.2" />
+                  <mssgle:LineSegment
+                    End="257.4,42.9" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="53.16798828125,30.2,151.0640234375,10.3349609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Conteneur de boucles Foreach\Integration Data Client\Destination OLE DB">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
